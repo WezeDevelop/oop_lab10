@@ -1,0 +1,42 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:MultiThreadedApp.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="MultiThreadApp.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="MultiThreadedApp">
+
+    <StackPanel Margin="20" Spacing="10">
+        <TextBlock Text="3 потокова программа" FontSize="16" HorizontalAlignment="Center"/>
+        
+        <StackPanel Orientation="Horizontal" Spacing="10">
+            <Button x:Name="StartThread1Btn" Content="Запустити 1 Поток" Width="150"/>
+            <Button x:Name="StopThread1Btn" Content="Зупинити 1 поток" Width="150"/>
+            <TextBlock Text="Блоковий алгоритм шифрування ДЕРЖСТАНДАРТ" VerticalAlignment="Center"/>
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal" Spacing="10">
+            <Button x:Name="StartThread2Btn" Content="Запустити 2 Поток" Width="150"/>
+            <Button x:Name="StopThread2Btn" Content="Зупинити 2 поток" Width="150"/>
+            <TextBlock Text="Алгоритм хешування N-Хеш" VerticalAlignment="Center"/>
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal" Spacing="10">
+            <Button x:Name="StartThread3Btn" Content="Запустити 3 Поток" Width="150"/>
+            <Button x:Name="StopThread3Btn" Content="Зупинити 3 поток" Width="150"/>
+            <TextBlock Text="Алгоритми шифрування RC4" VerticalAlignment="Center"/>
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
+            <Button x:Name="StartAllBtn" Content="Запустити всі потоки" Width="150"/>
+            <Button x:Name="StopAllBtn" Content="Зупинити всі потоки" Width="150"/>
+        </StackPanel>
+        
+        <TextBox x:Name="OutputTextBox" Height="150" AcceptsReturn="True" IsReadOnly="True"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+    </StackPanel>
+
+</Window>
